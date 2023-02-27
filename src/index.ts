@@ -8,10 +8,14 @@ const repo =
 new Trigger({
   id: "github-stars-to-slack",
   name: "GitHub Stars to Slack",
-  on: github.events.pushEvent({
+  on: github.events.newStarEvent({
     repo,
   }),
   run: async (event) => {
+    console.log("got an event!")
+    console.log(event)
+    const repository = event.repository.full_name
+
     await slack.postMessage("⭐️", {
       channelName: "test",
       text: `New GitHub star from \n<${event.sender.html_url}|${event.sender.login}>. You now have ${event.repository.stargazers_count} stars!`,
