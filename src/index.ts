@@ -3,7 +3,7 @@ import * as github from "@trigger.dev/github";
 import * as slack from "@trigger.dev/slack";
 
 const repo =
-  process.env.GITHUB_REPOSITORY ?? "triggerdotdev/github-stars-to-slack";
+  process.env.GITHUB_REPOSITORY
 
 new Trigger({
   id: "github-stars-to-slack",
