@@ -11,7 +11,7 @@ console.log(repo)
 new Trigger({
   id: "github-stars-to-slack",
   name: "GitHub Stars to Slack",
-  endpoint: "ws://7fbf-73-223-181-47.ngrok.io/ws"
+  endpoint: "ws://localhost:8889/ws",
   on: github.events.newStarEvent({
     repo,
   }),
@@ -22,7 +22,7 @@ new Trigger({
 
     await slack.postMessage("⭐️", {
       channelName: "test",
-      text: `New GitHub star from \n<${event.sender.html_url}|${event.sender.login}>. You now have ${event.repository.stargazers_count} stars!`,
+      text: `1 New GitHub star from \n<${event.sender.html_url}|${event.sender.login}>. You now have ${event.repository.stargazers_count} stars!`,
     });
   },
 }).listen();
