@@ -18,7 +18,7 @@ new Trigger({
 
     await slack.postMessage("⭐️", {
       channelName: "test",
-      text: `Woohoo!! I got a new GitHub star from \n<${event.sender.html_url}|${event.sender.login}>. You now have ${event.repository.stargazers_count} stars!`,
+      text: `Yay!!! :)  I got a new GitHub star from \n<${event.sender.html_url}|${event.sender.login}>. You now have ${event.repository.stargazers_count} stars!`,
     });
   },
 }).listen();
