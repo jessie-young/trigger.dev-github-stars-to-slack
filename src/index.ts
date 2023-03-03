@@ -5,12 +5,9 @@ import * as slack from "@trigger.dev/slack";
 //const repo = process.env.GITHUB_REPOSITORY ?? "triggerdotdev/github-stars-to-slack";
 const repo = process.env.GITHUB_REPOSITORY
 
-console.log("repo")
-console.log(repo)
 new Trigger({
   id: "github-stars-to-slack",
   name: "GitHub Stars to Slack",
-  endpoint: "ws://localhost:8889/ws",
   on: github.events.newStarEvent({
     repo,
   }),
