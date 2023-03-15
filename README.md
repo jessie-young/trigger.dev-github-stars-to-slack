@@ -1,5 +1,7 @@
 ## ✨ Trigger.dev GitHub Stars to Slack
 
+Testing
+
 This repo contains a [GitHub newStarEvent](https://docs.trigger.dev/integrations/apis/github/events/new-star) Trigger that will run whenever the specified repository gets a new ⭐️:
 
 ```ts
