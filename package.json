@@ -1,0 +1,29 @@
+{
+  "name": "github-stars-to-slack",
+  "version": "1.0.0",
+  "description": "A Trigger.dev template that sends a Slack message when a GitHub repo gets a new star",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch --require ./node_modules/dotenv/config src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@trigger.dev/github": "^0.1.27",
+    "@trigger.dev/sdk": "^0.2.22",
+    "@trigger.dev/slack": "^0.1.27",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/node": "16",
+    "dotenv": "^16.0.3",
+    "tsx": "^3.12.2",
+    "typescript": "^4.9.4"
+  },
+  "triggerdotdev": {
+    "template": "github-stars-to-slack"
+  }
+}
