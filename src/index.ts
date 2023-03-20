@@ -2,7 +2,8 @@ import { Trigger } from "@trigger.dev/sdk";
 import * as github from "@trigger.dev/github";
 import * as slack from "@trigger.dev/slack";
 
-const repo = "jessie-young/github-stars-to-slack";
+const repo =
+  process.env.GITHUB_REPOSITORY;
 
 new Trigger({
   id: "github-stars-to-slack",
