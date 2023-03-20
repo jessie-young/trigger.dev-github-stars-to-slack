@@ -4,6 +4,8 @@ import * as slack from "@trigger.dev/slack";
 
 const repo =
   process.env.GITHUB_REPOSITORY;
+console.log("repo");
+console.log(repo);
 
 new Trigger({
   id: "github-stars-to-slack",
